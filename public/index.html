@@ -46,7 +46,7 @@
               <thead>
                 <tr>
                   <th>Status</th>
-                  <th>Name</th>
+                  <th>Adhoc Title</th>
                   <th>Last run started</th>
                   <th>Next run starts</th>
                   <th>Last finished</th>
@@ -127,7 +127,7 @@
         <% if (failed) { %><span class="label label-danger">Failed</span><% } %>
       </td>
       <td>
-        <%- job.name %>
+        <%- job.data.title %>
       </td>
       <td><% if (job.lastRunAt) { %><time datetime="<%- moment(job.lastRunAt).toISOString() %>"><%- moment(job.lastRunAt).fromNow() %></time><% } %></td>
       <td><% if (job.nextRunAt) { %><time datetime="<%- moment(job.nextRunAt).toISOString() %>"><%- moment(job.nextRunAt).fromNow() %></time><% } %></td>
